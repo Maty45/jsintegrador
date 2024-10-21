@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=library_add" />    
+    <title>Integrador JavaScript</title>
+  </head>
+  <body>
+    <header>
+      <div class="container-principalHeader">
+        <div class="container-contentHeader">
+          <div class="header-search"> 
+            <input class="inputHeader" id="inputHeader" type="text" placeholder="Ingrese un elemento">
+            <button id="buttonSearch" class="buttonSearch"><i class="fa-solid fa-magnifying-glass"></i>Buscar</button>
+          </div>
+          <div>
+            <button id="buttonAdd" class="btn-add">Agregar elemento <span class="material-symbols-outlined">
+              library_add
+              </span></button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container-view">
+        <aside class="listAside">
+          <h2><i class="fa-solid fa-list"></i>Categorias</h2>
+          <ul id="listFilter">
+
+          </ul>
+        </aside>
+        <div class="store" id="storeContainer"></div>
+      </div>
+      <div class="popUpContainer-principal" id="modalPopUp">
+        <div class="popUpContainer">
+          <div class="containerTitle">
+            <h1>Agregar o modificar un producto</h1>
+          </div>
+          <div class="containerInputs-popup">
+            <input type="text" placeholder="Ingrese un nombre" id="nombre"/>
+            <input type="text" placeholder="Ingrese una imagen" id="imagen"/>
+            <input type="number" value="0" id="precio" />
+            <select id="categoria" >
+              <option >Seleccione una categoria</option>
+              <option value="Gaseosas">Gaseosas</option>
+              <option value="Hamburguesas">Hamburguesas</option>
+              <option value="Papas">Papas</option>
+            </select>
+          </div>
+          <div class="containerBtn">
+            <button class="buttonPopUP accept" id="acceptBtn">Aceptar</button>
+            <button class="buttonPopUP cancel" id="cancelBtn">Cancelar</button>
+            <button class="buttonPopUP delete" id="deleteBtn">Eliminar</button>
+          </div>
+          
+        </div>
+      </div>
+    </main>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
